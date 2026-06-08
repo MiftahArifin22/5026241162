@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\DosenController;
 use App\Http\Controllers\PegawaiDBController;
+use App\Http\Controllers\UnggasDBController;
 
 Route::get('/', function () {
     return view('welcome');
@@ -80,3 +81,12 @@ route::get('/pegawai/cari', [PegawaiDBController::class, 'cari']);
 
 //route untuk tambah pegawai
 route::get('pegawai/tambah', [PegawaiDBController::class, 'tambah']);
+
+//route untuk unggas
+route::get('unggas', [App\Http\Controllers\UnggasDBController::class, 'index']);
+route::get('/unggas/tambah', [App\Http\Controllers\UnggasDBController::class, 'tambah']);
+route::post('/unggas/store', [App\Http\Controllers\UnggasDBController::class, 'store']);
+route::get('/unggas/edit/{id}', [App\Http\Controllers\UnggasDBController::class, 'edit']);
+route::post('/unggas/update', [App\Http\Controllers\UnggasDBController::class, 'update']);
+route::get('/unggas/hapus/{id}', [App\Http\Controllers\UnggasDBController::class,'hapus']);
+route::get('/unggas/cari', [App\Http\Controllers\UnggasDBController::class,'cari']);

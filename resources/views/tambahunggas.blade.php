@@ -1,7 +1,6 @@
 @extends('templatepegawai')
-@section('judul_halaman', 'Data Pegawai')
+@section('judul_halaman', 'Data Unggas')
 @section('konten')
-
     <p>
         <br>
         <a href="/unggas" class="btn btn-secondary mb-4">Kembali</a>
@@ -31,17 +30,13 @@
                 </div>
                 <div class="row mb-3">
                     <label for="tersedia" class="col-sm-2 col-form-label">
-                        Tersedia
+                        Status Ketersediaan
                     </label>
                     <div class="col-sm-10">
                         <select name="tersedia" id="tersedia" class="form-control" required>
                             <option value="">-- Pilih Status --</option>
-                            <option value="Y">
-                                Y - Tersedia
-                            </option>
-                            <option value="T">
-                                T - Tidak Tersedia
-                            </option>
+                            <option value="Y">Tersedia</option>
+                            <option value="T">Tidak Tersedia</option>
                         </select>
                     </div>
                 </div>
