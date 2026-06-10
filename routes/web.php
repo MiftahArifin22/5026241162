@@ -90,3 +90,9 @@ route::get('/unggas/edit/{id}', [App\Http\Controllers\UnggasDBController::class,
 route::post('/unggas/update', [App\Http\Controllers\UnggasDBController::class, 'update']);
 route::get('/unggas/hapus/{id}', [App\Http\Controllers\UnggasDBController::class,'hapus']);
 route::get('/unggas/cari', [App\Http\Controllers\UnggasDBController::class,'cari']);
+
+//route untuk keranjang
+route::get('/keranjang', [App\Http\Controllers\KeranjangDBController::class, 'index']);
+route::get('/keranjang/tambah', [App\Http\Controllers\KeranjangDBController::class, 'tambah']);
+route::post('/keranjang/store', [App\Http\Controllers\KeranjangDBController::class, 'store']);
+route::get('/keranjang/hapus/{id}', [App\Http\Controllers\KeranjangDBController::class, 'hapus']);
