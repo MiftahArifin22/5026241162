@@ -4,6 +4,9 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\DosenController;
 use App\Http\Controllers\PegawaiDBController;
 use App\Http\Controllers\UnggasDBController;
+use App\Http\Controllers\KeranjangDBController;
+use App\Http\Controllers\nilaiDBController;
+use App\Http\Controllers\SiswaController;
 
 Route::get('/', function () {
     return view('welcome');
@@ -96,3 +99,16 @@ route::get('/keranjang', [App\Http\Controllers\KeranjangDBController::class, 'in
 route::get('/keranjang/tambah', [App\Http\Controllers\KeranjangDBController::class, 'tambah']);
 route::post('/keranjang/store', [App\Http\Controllers\KeranjangDBController::class, 'store']);
 route::get('/keranjang/hapus/{id}', [App\Http\Controllers\KeranjangDBController::class, 'hapus']);
+
+//route untuk nilaikuliah
+route::get('/nilaikuliah', [App\Http\Controllers\nilaiDBController::class, 'index']);
+route::get('/nilaikuliah/tambah', [App\Http\Controllers\nilaiDBController::class, 'tambah']);
+route::post('/nilaikuliah/store', [App\Http\Controllers\nilaiDBController::class, 'store']);
+
+//route untuk siswa
+Route::get('/siswa', [SiswaController::class, 'index'])->name('siswa.index');
+Route::get('/siswa/create', [SiswaController::class, 'create'])->name('siswa.create');
+Route::post('/siswa', [SiswaController::class, 'store'])->name('siswa.store');
+Route::get('/siswa/{nrp}/edit', [SiswaController::class, 'edit'])->name('siswa.edit');
+Route::put('/siswa/{nrp}', [SiswaController::class, 'update'])->name('siswa.update');
+Route::delete('/siswa/{nrp}', [SiswaController::class, 'destroy'])->name('siswa.destroy');

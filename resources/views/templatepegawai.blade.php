@@ -26,13 +26,13 @@
                         <a class="nav-link" href="/unggas">Unggas</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Siswa</a>
+                        <a class="nav-link" href="/siswa">Siswa</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/keranjang">D4</a>
+                        <a class="nav-link" href="/keranjang">D4 Laki-laki</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/e5">E5</a>
+                        <a class="nav-link" href="/nilaikuliah">E5 Perempuan</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#">EAS</a>
